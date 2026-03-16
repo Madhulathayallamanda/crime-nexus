@@ -23,7 +23,7 @@ export default function Sidebar() {
         <div className="brand-badge">
           <div className="brand-icon"><Shield size={20} /></div>
           <div className="brand-text">
-            <h1>CrimePortal</h1>
+            <h1>CrimeNexus</h1>
             <span>Law Enforcement System</span>
           </div>
         </div>

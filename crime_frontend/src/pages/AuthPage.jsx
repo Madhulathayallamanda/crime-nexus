@@ -47,7 +47,7 @@ export default function AuthPage() {
           <div className="auth-brand">
             <div className="auth-brand-icon"><Shield size={24} /></div>
             <div className="auth-brand-text">
-              <h1>Crime Portal</h1>
+              <h1>CrimeNexus</h1>
               <span>Law Enforcement System</span>
             </div>
           </div>
