@@ -1,8 +1,8 @@
 # CrimeNexus
 
-CrimeNexus is a web-based Crime Reporting and Case Management platform that allows citizens to report crimes digitally and enables law enforcement agencies to manage, track, and analyze cases through a centralized system.
+CrimeNexus is a smart, web-based Crime Reporting and Case Management platform that enables citizens to report crimes digitally while allowing law enforcement agencies to manage, track, and analyze cases through a centralized system.
 
-The platform simplifies the traditional crime reporting process by providing a digital interface for submitting reports, monitoring case progress, and analyzing crime trends using interactive dashboards.
+The platform enhances traditional reporting by integrating **real-time tracking, GPS-based location handling, and intelligent case assignment**, making the system efficient, scalable, and user-friendly.
 
 ---
 
@@ -11,33 +11,66 @@ The platform simplifies the traditional crime reporting process by providing a d
 In many regions, crime reporting still relies on manual processes or physical visits to police stations. This leads to:
 
 • Delayed reporting of incidents  
-• Difficulty in tracking case progress  
-• Inefficient case management  
-• Limited crime data insights  
+• Lack of transparency in case tracking  
+• Inefficient allocation of police resources  
+• Limited data-driven decision making  
 
-CrimeNexus solves these issues by providing a centralized digital platform for crime reporting and case management.
+CrimeNexus solves these challenges using a **digital-first, data-driven approach**.
 
 ---
 
 ## Key Features
 
-### Crime Reporting
-Citizens can submit detailed crime reports including title, description, and location.
+### 🚨 Smart Crime Reporting
+Users can report crimes online with:
+- Title, description, and location  
+- Latitude & longitude (GPS-based)  
+- Evidence file support  
 
-### Case Management
-Law enforcement authorities can create and manage case records related to reported crimes.
+---
 
-### Dashboard Monitoring
-The dashboard provides real-time statistics about crime reports and case records.
+### 📍 Automatic Station Assignment
+- Detects user location using coordinates  
+- Assigns nearest police station automatically  
+- Calculates distance between user and station  
 
-### Data Analytics
-Interactive charts display crime trends and case distribution.
+---
 
-### Authentication System
-Secure login and registration system for users.
+### 👤 User Case Tracking
+- Users can track submitted cases  
+- View real-time status updates:
+  - OPEN  
+  - IN_PROGRESS  
+  - CLOSED  
 
-### Modern Dashboard UI
-A responsive and modern interface designed for usability and clarity.
+---
+
+### 👮 Admin / Officer Panel
+- Officers can view assigned cases  
+- Update investigation status  
+- Manage case lifecycle  
+
+---
+
+### 📊 Dashboard Analytics
+- Total crime reports  
+- Active investigations  
+- Closed cases  
+- Monthly trends (charts)  
+- Crime status distribution  
+
+---
+
+### 🔐 Authentication System
+- User registration & login  
+- Secure session handling  
+
+---
+
+### 🎨 Modern UI/UX
+- Responsive dashboard  
+- Interactive charts (Recharts)  
+- Clean and intuitive interface  
 
 ---
 
@@ -45,19 +78,30 @@ A responsive and modern interface designed for usability and clarity.
 
 CrimeNexus follows a **three-tier architecture**:
 
-User Layer  
-Citizens and administrators interact with the platform through the web interface.
+### 1. User Layer
+Citizens and officers interact through the web interface.
 
-Frontend Layer  
-React-based user interface handles user interactions, dashboards, and forms.
+### 2. Frontend Layer
+React-based UI handles:
+- User interaction  
+- Routing  
+- Dashboard visualization  
 
-Backend Layer  
-Spring Boot REST APIs manage crime data, case records, and business logic.
+### 3. Backend Layer
+Spring Boot APIs handle:
+- Business logic  
+- Crime processing  
+- Station assignment  
 
-Data Layer  
-The database stores crime reports, case records, and user data.
+### 4. Data Layer
+Stores:
+- Crime reports  
+- Case records  
+- User data  
 
-Architecture Flow:
+---
+
+### Architecture Flow
 
 User  
 ↓  
@@ -72,23 +116,27 @@ Database
 ## Technology Stack
 
 ### Frontend
-React.js  
-JavaScript  
-HTML5  
-CSS3  
-Recharts (Data Visualization)  
-React Router
+- React.js  
+- JavaScript  
+- HTML5  
+- CSS3  
+- Recharts  
+- React Router  
 
 ### Backend
-Java  
-Spring Boot  
-REST APIs  
-Maven
+- Java  
+- Spring Boot  
+- REST APIs  
+- Maven  
+
+### Database
+- H2 (In-memory database)  
 
 ### Tools
-Git  
-GitHub  
-VS Code  
+- Git  
+- GitHub  
+- VS Code  
+- Spring Tool Suite (STS)  
 
 ---
 
@@ -139,15 +187,29 @@ crime-nexus
 
 ## Application Workflow
 
-1. User logs in or registers in the system.
+### 👤 User Flow
+1. User registers or logs in  
+2. Submits a crime report  
+3. System captures GPS coordinates  
+4. Nearest police station is auto-assigned  
+5. User tracks case status  
 
-2. Citizens submit crime reports through the crime reporting page.
+---
 
-3. The backend processes the report and stores it in the database.
+### 👮 Admin / Officer Flow
+1. Officer logs in  
+2. Views assigned cases  
+3. Updates case status  
+4. Resolves cases  
 
-4. Case records are created for investigations.
+---
 
-5. The dashboard displays statistics and analytics about reported crimes.
+## Core Logic (Highlight)
+
+- GPS-based location detection  
+- Distance calculation for nearest station  
+- Automatic police station assignment  
+- Real-time case status updates  
 
 ---
 
@@ -155,12 +217,10 @@ crime-nexus
 
 • Total crime reports  
 • Open incidents  
-• Resolved cases  
 • Active investigations  
-• Monthly crime reports chart  
-• Crime status distribution chart  
-
-These visual insights help authorities monitor crime trends.
+• Resolved cases  
+• Monthly crime analytics  
+• Status distribution charts  
 
 ---
 
@@ -204,19 +264,22 @@ http://localhost:9060
 
 ## Future Improvements
 
-• AI-based crime prediction analytics  
+• AI-based crime prediction  
 • Real-time notifications  
-• GPS-based nearest police station detection  
-• Mobile application integration  
-• Role-based access control  
+• Google Maps integration  
+• Role-based authentication (Admin/User)  
+• Mobile application  
 
 ---
 
 ## Author
 
-Yallamanda Madhulatha  
+**Yallamanda Madhulatha**  
 Computer Science Engineering Student  
 Anurag University  
+
+GitHub:  
+https://github.com/Madhulathayallamanda
 
 GitHub  
 https://github.com/Madhulathayallamanda
