@@ -1,0 +1,51 @@
+package com.crimeportal.service;
+
+import com.crimeportal.model.PoliceStation;
+import org.springframework.stereotype.Service;
+import java.util.*;
+
+@Service
+public class StationService {
+
+    private List<PoliceStation> stations = List.of(
+        new PoliceStation("Central Police Station", 17.3850, 78.4867),
+        new PoliceStation("Banjara Hills Police Station", 17.4123, 78.4482),
+        new PoliceStation("Jubilee Hills Police Station", 17.4239, 78.4070)
+    );
+
+    public Map<String, Object> findNearest(double lat, double lon) {
+
+        PoliceStation nearest = null;
+        double minDist = Double.MAX_VALUE;
+
+        for (PoliceStation s : stations) {
+            double d = distance(lat, lon, s.getLatitude(), s.getLongitude());
+
+            if (d < minDist) {
+                minDist = d;
+                nearest = s;
+            }
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("station", nearest.getName());
+        result.put("distance", minDist);
+
+        return result;
+    }
+
+    private double distance(double lat1, double lon1, double lat2, double lon2) {
+        final int R = 6371;
+
+        double latDistance = Math.toRadians(lat2 - lat1);
+        double lonDistance = Math.toRadians(lon2 - lon1);
+
+        double a = Math.sin(latDistance/2) * Math.sin(latDistance/2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(lonDistance/2) * Math.sin(lonDistance/2);
+
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+        return R * c;
+    }
+}
